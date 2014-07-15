@@ -25,6 +25,8 @@
 		3621C9BB1975B96F00F3E8B1 /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3621C9BA1975B96F00F3E8B1 /* SocketManager.m */; };
 		384482CF3C1B4843B085CF18 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE6DA0E8F4D4126A06616AB /* libPods.a */; };
 		D7D525A04EEA461F9D69D8DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE6DA0E8F4D4126A06616AB /* libPods.a */; };
+		E34023FF1975C848000DA9FD /* certificate.der in Resources */ = {isa = PBXBuildFile; fileRef = E34023FE1975C848000DA9FD /* certificate.der */; };
+		E3CC403C1975EAEC00061628 /* ca.der in Resources */ = {isa = PBXBuildFile; fileRef = E3CC403B1975EAEC00061628 /* ca.der */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		3621C9B71975B95100F3E8B1 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		3621C9B91975B96F00F3E8B1 /* SocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
 		3621C9BA1975B96F00F3E8B1 /* SocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
+		E34023FE1975C848000DA9FD /* certificate.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = certificate.der; sourceTree = "<group>"; };
+		E3CC403B1975EAEC00061628 /* ca.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = ca.der; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 		3621C9871975B77C00F3E8B1 /* SSL */ = {
 			isa = PBXGroup;
 			children = (
+				E3CC403B1975EAEC00061628 /* ca.der */,
+				E34023FE1975C848000DA9FD /* certificate.der */,
 				3621C9901975B77C00F3E8B1 /* AppDelegate.h */,
 				3621C9911975B77C00F3E8B1 /* AppDelegate.m */,
 				3621C9931975B77C00F3E8B1 /* Main.storyboard */,
@@ -250,9 +256,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3CC403C1975EAEC00061628 /* ca.der in Resources */,
 				3621C99A1975B77C00F3E8B1 /* Images.xcassets in Resources */,
 				3621C98C1975B77C00F3E8B1 /* InfoPlist.strings in Resources */,
 				3621C9951975B77C00F3E8B1 /* Main.storyboard in Resources */,
+				E34023FF1975C848000DA9FD /* certificate.der in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

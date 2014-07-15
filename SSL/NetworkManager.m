@@ -7,6 +7,7 @@
 //
 
 #import "NetworkManager.h"
+#import <AFURLConnectionOperation.h>
 
 @interface NetworkManager ()
 
@@ -21,19 +22,20 @@
     
     dispatch_once(&onceToken, ^{
         
-        _manager = [[NetworkManager alloc] initWithBaseURL:[NSURL URLWithString:@"<#string#>"]];
+        _manager = [[NetworkManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://localhost:1337"]];
+        _manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+
+        // SSL Pinning
+        NSString *certificatePath = [[NSBundle mainBundle] pathForResource:@"certificate" ofType:@"der"];
+        NSData *certificateData = [NSData dataWithContentsOfFile:certificatePath];
+
+        AFSecurityPolicy *securityPolicy = [[AFSecurityPolicy alloc] init];
+        [securityPolicy setAllowInvalidCertificates:YES];
+        [securityPolicy setPinnedCertificates:@[certificateData]];
+        [securityPolicy setSSLPinningMode:AFSSLPinningModeCertificate];
         
-//        // SSL Pinning
-//        NSString *certifiactePath = [[NSBundle mainBundle] pathForResource:@"Certificate" ofType:@"der"];
-//        NSData *certificateData = [NSData dataWithContentsOfFile:certifiactePath];
-//        
-//        AFSecurityPolicy *securityPolicy = [[AFSecurityPolicy alloc] init];
-//        [securityPolicy setAllowInvalidCertificates:NO];
-//        [securityPolicy setPinnedCertificates:@[certificateData]];
-//        [securityPolicy setSSLPinningMode:AFSSLPinningModeCertificate];
-//        
-//        [_manager setSecurityPolicy:securityPolicy];
-        
+        [_manager setSecurityPolicy:securityPolicy];
     });
     
     return _manager;

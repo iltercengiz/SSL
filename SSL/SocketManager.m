@@ -7,7 +7,7 @@
 //
 
 #import "SocketManager.h"
-
+#import "NetworkManager.h"
 #import <SocketRocket/SRWebSocket.h>
 
 @interface SocketManager () <SRWebSocketDelegate>
@@ -28,10 +28,23 @@
     dispatch_once(&onceToken, ^{
         
         _manager = [SocketManager new];
-        
-        _manager.socket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:@"<#string#>"]];
+
+        NSData *certificateData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"certificate" ofType:@"der"]];
+        CFDataRef inDERData = (__bridge CFDataRef)certificateData;
+        SecCertificateRef cert = SecCertificateCreateWithData(NULL, inDERData);
+
+//        NSData *certificateData2 = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"certificate" ofType:@"der"]];
+//        CFDataRef inDERData2 = (__bridge CFDataRef)certificateData2;
+//        SecCertificateRef cert2 = SecCertificateCreateWithData(NULL, inDERData2);
+
+        NSArray *certs = [NSArray arrayWithObject:(id) (__bridge id) cert];
+
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://localhost:1337/"]];
+        [request setSR_SSLPinnedCertificates:certs];
+
+        _manager.socket = [[SRWebSocket alloc] initWithURLRequest:request];
         _manager.socket.delegate = _manager;
-        
+
     });
     
     return _manager;
@@ -62,6 +75,8 @@
 
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean {
     NSLog(@"Socket disconnected!");
+    NSLog(@"Reason: %@", reason);
+    NSLog(@"Code: %d", (int)code);
     [self.delegate socketManagerDidDisconnect:self];
 }
 

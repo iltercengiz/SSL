@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>347DB595-9A16-4220-9AC4-01F32E75135B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SSL</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FE5549A5-19E7-482B-8D31-46BD80D85250</key>
+		<string>ssh://github.com/iltercengiz/SSL.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SSL.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FE5549A5-19E7-482B-8D31-46BD80D85250</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/iltercengiz/SSL.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FE5549A5-19E7-482B-8D31-46BD80D85250</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FE5549A5-19E7-482B-8D31-46BD80D85250</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SSL</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -50,7 +50,7 @@
 #pragma mark - IBAction
 
 - (IBAction)sendAPIRequest:(id)sender {
-    [self.networkManager GET:@"<#string#>"
+    [self.networkManager GET:@"/"
                   parameters:nil
                      success:^(NSURLSessionDataTask *task, id responseObject) {
                          [self.apiLabel setText:[NSString stringWithFormat:@"API response: %@", responseObject]];
@@ -61,7 +61,8 @@
 
 - (IBAction)toggleSocketState:(id)sender {
     [self.socketButton setTitle:@"Connecting..." forState:UIControlStateNormal];
-    
+
+    [_socketManager connect];
 }
 
 #pragma mark - SocketManagerDelegate
