@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3621C97D1975B77C00F3E8B1"
-               BuildableName = "SSL.app"
-               BlueprintName = "SSL"
-               ReferencedContainer = "container:SSL.xcodeproj">
+               BlueprintIdentifier = "76BEEAF3B9604EDFAD83FF76"
+               BuildableName = "libPods.a"
+               BlueprintName = "Pods"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3621C99E1975B77D00F3E8B1"
-               BuildableName = "SSLTests.xctest"
-               BlueprintName = "SSLTests"
-               ReferencedContainer = "container:SSL.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3621C97D1975B77C00F3E8B1"
-            BuildableName = "SSL.app"
-            BlueprintName = "SSL"
-            ReferencedContainer = "container:SSL.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -58,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3621C97D1975B77C00F3E8B1"
-            BuildableName = "SSL.app"
-            BlueprintName = "SSL"
-            ReferencedContainer = "container:SSL.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -76,15 +48,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3621C97D1975B77C00F3E8B1"
-            BuildableName = "SSL.app"
-            BlueprintName = "SSL"
-            ReferencedContainer = "container:SSL.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
